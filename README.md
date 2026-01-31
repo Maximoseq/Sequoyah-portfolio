@@ -12,7 +12,8 @@ A collection of work done either in school or in personal time.
 - Final Presentation (Project Overview & Solution): https://www.figma.com/proto/GNGMiDMHpJ5oYPvr3YZ28P/Design-Space-for-Ewha-x-UW-Hackathon?node-id=204-5406&t=S9YlSDPKHNVmBXmr-1
   <img width="640" height="360" alt="GUI" src="https://github.com/user-attachments/assets/094947bc-b7df-4348-9143-2c0eddd30b1c" />
 - Design Process & Research (Ideation, UX/UI, Iterations): https://www.figma.com/design/GNGMiDMHpJ5oYPvr3YZ28P/Design-Space-for-Ewha-x-UW-Hackathon?node-id=0-1&t=vAwOf0Djzc5362WL-1
-  
+  <img width="640" height="360" alt="Screenshot 2026-01-30 175524" src="https://github.com/user-attachments/assets/ed586199-4121-46ba-8536-92cf6167d7d8" />
+
 
 
 ### Other Projects
