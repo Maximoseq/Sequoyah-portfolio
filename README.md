@@ -1,7 +1,7 @@
 # Sequoyah-portfolio
 A collection of work done either in school or in personal time.
 
-## Selected Work
+## Selected Works
 
 ### Real-Time Fisheries Compliance & Alert System
 - This project involved designing a real-time fisheries compliance system to ensure that there is minimal unintentional illegal fishing. As a team, we identified the scope of the fisheries compliance system by designing workflows for fishing vessels and identifying common scenarios for illegal activities, which translated to user stories, epics, and requirements. We used Azure DevOps to manage documentation, backlogs, and objectives, as well as designing workflows, alerts, and notifications.
@@ -14,8 +14,9 @@ A collection of work done either in school or in personal time.
 - Design Process & Research (Ideation, UX/UI, Iterations): https://www.figma.com/design/GNGMiDMHpJ5oYPvr3YZ28P/Design-Space-for-Ewha-x-UW-Hackathon?node-id=0-1&t=vAwOf0Djzc5362WL-1
   <img width="640" height="360" alt="Screenshot 2026-01-30 175524" src="https://github.com/user-attachments/assets/ed586199-4121-46ba-8536-92cf6167d7d8" />
 
-
-
-### Other Projects
-- Project Name – one-line description  
-  Link: https://…
+### SecondStep - Community Resource Hub (DubHacks Prototype)
+- SecondStep is a community-focused prototype that aims to assist people in locating essential resources in their communities, such as food support, shelter, and legal services. The application was developed with the goal of not only assisting people in crisis but also those with limited cognitive knowledge, focusing on simplicity, visual guidance, and low-barrier interaction patterns. As part of the design process, I conducted an interview with a volunteer who assists people with pro bono lawyers in cases involving individuals in domestic violence situations, and the input further emphasized the need to simplify access to resources that many people may not even be aware of.
+- Hackathon Submission: https://devpost.com/software/map-based-selling-app
+- GitHub Repo: https://github.com/paingkalay7324/dubHacks25
+ <img width="640" height="360" alt="Second" src="https://github.com/user-attachments/assets/23005d22-bcd0-4d8e-ac76-a18f0ff27a15" />
+ 
