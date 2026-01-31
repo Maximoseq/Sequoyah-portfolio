@@ -34,7 +34,7 @@ A collection of work done either in school or in personal time.
 
 - Third static image (question page)
   
-  <img width="1188" height="1299" alt="3rd page LFD" src="https://github.com/user-attachments/assets/a7dea0b1-532d-4cd7-a108-acfb957845a0" />
+<img width="2360" height="1402" alt="question page" src="https://github.com/user-attachments/assets/9e4168bf-87bd-459e-a307-c6deb802a324" />
 
 
 
