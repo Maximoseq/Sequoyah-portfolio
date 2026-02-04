@@ -1,290 +1,221 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Maximiliano Bange</title>
 
-    <!-- Main stylesheet for layout + theme -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
-  <body class="mode-design">
-    <main class="container">
-      <header class="topbar">
-        <div class="id">
-          <!-- Keep this image in your repo (ex: /images/avatar.jpg) -->
-          <img class="avatar" src="images/avatar.jpg" alt="Profile photo" />
+  <body class="design-page">
+    <div class="page">
+      <!-- Header -->
+      <header class="header">
+        <div class="header-left">
+          <img
+            class="avatar"
+            src="images/profile-image.jpg"
+            alt="Portrait photo of Maximiliano Bange"
+          />
 
-          <div>
+          <div class="header-text">
             <h1 class="name">Maximiliano Bange</h1>
-            <p class="school">University of Washington</p>
+            <p class="sub">University of Washington</p>
           </div>
         </div>
 
-        <nav class="socials" aria-label="Social links">
-          <a href="https://github.com/Maximoseq" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/mbange3/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="mailto:YOUR_PERSONAL_EMAIL_HERE">Email</a>
-        </nav>
+        <div class="header-right">
+            <div class="social-links">
+                <a class="pill" href="https://github.com/Maximoseq" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="pill" href="https://www.linkedin.com/in/mbange3/" target="_blank" rel="noreferrer">LinkedIn</a>
+                <a class="pill" href="mailto:mbange@uw.edu">Email</a>
+            </div>
+
+        <div class="school-logo">
+            <img src="images/ischool-logo.png" alt="University of Washington Information School logo">
+        </div>
+    </div>
+
       </header>
 
-      <section class="controls">
-        <div class="toggle" role="tablist" aria-label="Portfolio modes">
-          <button
-            id="btnDesign"
-            class="tab active"
-            type="button"
-            role="tab"
-            aria-selected="true"
-          >
-            Design &amp; Product
-          </button>
+      <!-- Switch buttons -->
+      <nav class="switch">
+        <a class="switch-btn active" href="index.html" aria-current="page">Design &amp; Product</a>
+        <a class="switch-btn" href="data.html">Data &amp; Analysis</a>
+      </nav>
 
-          <button
-            id="btnData"
-            class="tab"
-            type="button"
-            role="tab"
-            aria-selected="false"
-          >
-            Data &amp; Analysis
-          </button>
-        </div>
+      <!-- Intro -->
+      <section class="card intro">
+        <p class="lead">
+          Hi, I’m Maximiliano. I’m interested in how products and systems break down in the real world,
+          and how design and data can be used to improve them.
+        </p>
+
+        <p class="contact">
+          UW: <a href="mailto:mbange@uw.edu">mbange@uw.edu</a>
+        </p>
+
+        <h2 class="section-title">Design &amp; Product</h2>
+        <p class="muted">
+          I focus on how people interact with systems and where those systems break down. Most of this work
+          comes from product design, UX, and systems thinking coursework, with an emphasis on real constraints
+          and tradeoffs.
+        </p>
       </section>
 
-      <section class="layout">
-        <!-- LEFT COLUMN: identity + constant bio + mode-specific bio -->
-        <aside class="left">
-          <p class="corebio">
-            Hi, I’m Maximiliano. I’m a UW student interested in how products and systems break down
-            in the real world, and how design and data can be used to improve them.
-          </p>
-
-          <!-- Optional: show UW email without making it a mailto target -->
-          <p class="contactNote">UW: mbange3 [at] uw [dot] edu</p>
-
-          <div id="bioDesign" class="modebio">
-            <h2>Design &amp; Product</h2>
-            <p>
-              I focus on how people interact with systems and where those systems break down. Most
-              of this work comes from product design, UX, and systems thinking coursework, with an
-              emphasis on real constraints and tradeoffs.
+      <!-- Projects -->
+      <main class="stack">
+        <!-- Fisheries -->
+        <article class="project">
+          <div class="project-body">
+            <h3 class="project-title">Real-Time Fisheries Compliance &amp; Alert System</h3>
+            <p class="project-desc">
+              Workflow and alert design to reduce unintentional illegal fishing through real-time guidance.
             </p>
+
+            <p class="tags">Focus: problem framing · workflow logic · alerts · operational thinking</p>
+
+            <div class="actions">
+              <a
+                class="pill pill-dark"
+                href="https://dev.azure.com/mbange0367/LYWM/_wiki/wikis/LYWM.wiki/1/Team-Guidelines"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Wiki
+              </a>
+            </div>
           </div>
 
-          <div id="bioData" class="modebio hidden">
-            <h2>Data &amp; Analysis</h2>
-            <p>
-              I use data to explain patterns and tradeoffs beneath the surface. My analysis work
-              comes from R and Python coursework, focusing on visualization, comparison, and clear
-              interpretation.
+          <div class="project-media">
+            <img
+              src="images/Fish-proj-wireframe.png"
+              alt="Workflow diagram for the real-time fisheries compliance system"
+              loading="lazy"
+            />
+          </div>
+        </article>
+
+        <!-- Looking For Dawgs -->
+        <article class="project">
+          <div class="project-body">
+            <h3 class="project-title">Looking For Dawgs</h3>
+            <p class="project-desc">
+              React + Firebase study group platform with real-time Q&amp;A and upvotes.
             </p>
-          </div>
-        </aside>
 
-        <!-- RIGHT COLUMN: projects (switches based on mode) -->
-        <section class="right">
-          <!-- DESIGN & PRODUCT PROJECTS -->
-          <div id="projectsDesign">
-            <article class="project">
-              <div class="projectText">
-                <h3>Real-Time Fisheries Compliance &amp; Alert System</h3>
-                <p>
-                  Workflow and alert design to reduce unintentional illegal fishing through real-time guidance.
-                </p>
-                <p class="meta">Focus: problem framing · workflow logic · alerts · operational thinking</p>
+            <p class="tags">Focus: real-time features · UI logic · user flows</p>
 
-                <div class="actions">
-                  <a
-                    class="btn"
-                    href="https://github.com/Maximoseq/Sequoyah-portfolio"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    View
-                  </a>
-                  <a
-                    class="link"
-                    href="https://dev.azure.com/mbange0367/LYWM/_wiki/wikis/LYWM.wiki/1/Team-Guidelines"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Wiki
-                  </a>
-                </div>
-              </div>
-
-              <img
-                class="thumb"
-                src="images/fisheries.png"
-                alt="Preview image for Fisheries Compliance & Alert System"
-              />
-            </article>
-
-            <article class="project">
-              <div class="projectText">
-                <h3>Looking For Dawgs</h3>
-                <p>
-                  React + Firebase study group platform with real-time Q&amp;A and upvotes.
-                </p>
-                <p class="meta">Focus: real-time features · UI logic · user flows</p>
-
-                <div class="actions">
-                  <a
-                    class="btn"
-                    href="https://github.com/Maximoseq/Looking-For-Dawgs"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Repo
-                  </a>
-                </div>
-              </div>
-
-              <img
-                class="thumb"
-                src="images/lfd.png"
-                alt="Preview image for Looking For Dawgs project"
-              />
-            </article>
-
-            <article class="project">
-              <div class="projectText">
-                <h3>Gallae</h3>
-                <p>
-                  Music event discovery experience prototype built in Figma, focused on community and personalization.
-                </p>
-                <p class="meta">Focus: UX research · prototype logic · interaction flows</p>
-
-                <div class="actions">
-                  <a
-                    class="btn"
-                    href="https://www.figma.com/proto/GNGMiDMHpJ5oYPvr3YZ28P/Design-Space-for-Ewha-x-UW-Hackathon?node-id=204-5406&t=S9YlSDPKHNVmBXmr-1"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Prototype
-                  </a>
-                  <a
-                    class="link"
-                    href="https://www.figma.com/design/GNGMiDMHpJ5oYPvr3YZ28P/Design-Space-for-Ewha-x-UW-Hackathon?node-id=0-1&t=vAwOf0Djzc5362WL-1"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Design
-                  </a>
-                </div>
-              </div>
-
-              <img
-                class="thumb"
-                src="images/gallae.png"
-                alt="Preview image for Gallae project"
-              />
-            </article>
-
-            <article class="project">
-              <div class="projectText">
-                <h3>SecondStep - Community Resource Hub</h3>
-                <p>
-                  Community-focused prototype to help people locate essential resources like food support,
-                  shelter, and legal services with low-barrier interaction patterns.
-                </p>
-                <p class="meta">Focus: accessibility · simplicity · resource discovery</p>
-
-                <div class="actions">
-                  <a
-                    class="btn"
-                    href="https://devpost.com/software/map-based-selling-app"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Devpost
-                  </a>
-                  <a
-                    class="link"
-                    href="https://github.com/paingkalay7324/dubHacks25"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Repo
-                  </a>
-                </div>
-              </div>
-
-              <img
-                class="thumb"
-                src="images/secondstep.png"
-                alt="Preview image for SecondStep project"
-              />
-            </article>
+            <div class="actions">
+              <a
+                class="pill pill-dark"
+                href="https://github.com/Maximoseq/Looking-For-Dawgs"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Repo
+              </a>
+            </div>
           </div>
 
-          <!-- DATA & ANALYSIS PROJECTS -->
-          <div id="projectsData" class="hidden">
-            <article class="project">
-              <div class="projectText">
-                <h3>Seattle Data Visualizations (R)</h3>
-                <p>
-                  Comparative analyses using Seattle datasets with multiple visualization approaches and clear interpretation.
-                </p>
-                <p class="meta">Artifacts: PDF visualizations · interpretation notes</p>
-
-                <div class="actions">
-                  <a
-                    class="btn"
-                    href="https://github.com/Maximoseq/data-explorations"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Artifacts
-                  </a>
-                </div>
-              </div>
-
-              <img
-                class="thumb"
-                src="images/seattle-data.png"
-                alt="Preview image for Seattle data visualizations"
-              />
-            </article>
-
-            <article class="project">
-              <div class="projectText">
-                <h3>Python Data Exercise (THA2)</h3>
-                <p>
-                  Data processing and transformation work in Python, focused on correctness, edge cases, and readable structure.
-                </p>
-                <p class="meta">Tools: Python</p>
-
-                <div class="actions">
-                  <a
-                    class="btn"
-                    href="https://github.com/Maximoseq/data-explorations"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    View
-                  </a>
-                </div>
-              </div>
-
-              <img
-                class="thumb"
-                src="images/python.png"
-                alt="Preview image for Python data exercise"
-              />
-            </article>
+          <div class="project-media">
+            <img
+              src="images/LFD-home.png"
+              alt="Looking For Dawgs home page screenshot"
+              loading="lazy"
+            />
           </div>
-        </section>
-      </section>
+        </article>
+
+        <!-- Gallae -->
+        <article class="project">
+          <div class="project-body">
+            <h3 class="project-title">Gallae (Figma)</h3>
+            <p class="project-desc">
+              Music event discovery experience prototype built in Figma.
+            </p>
+
+            <p class="tags">Focus: UX research · prototype logic · interaction flows</p>
+
+            <div class="actions">
+              <a
+                class="pill pill-dark"
+                href="https://www.figma.com/proto/GNGMiDMHpJ5oYPvr3YZ28P/Design-Space-for-Ewha-x-UW-Hackathon?node-id=204-5406&t=S9YlSDPKHNVmBXmr-1"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Prototype
+              </a>
+
+              <a
+                class="pill"
+                href="https://www.figma.com/design/GNGMiDMHpJ5oYPvr3YZ28P/Design-Space-for-Ewha-x-UW-Hackathon?node-id=0-1&t=vAwOf0Djzc5362WL-1"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Process
+              </a>
+            </div>
+          </div>
+
+          <div class="project-media">
+            <img
+              src="images/Gallae.png"
+              alt="Gallae prototype UI preview"
+              loading="lazy"
+            />
+          </div>
+        </article>
+
+        <!-- SecondStep -->
+        <article class="project">
+          <div class="project-body">
+            <h3 class="project-title">SecondStep (DubHacks Prototype)</h3>
+            <p class="project-desc">
+              Community resource hub prototype designed for low-barrier access to food, shelter, and legal support.
+            </p>
+
+            <p class="tags">Focus: accessibility · clarity · user research</p>
+
+            <div class="actions">
+              <a
+                class="pill pill-dark"
+                href="https://github.com/paingkalay7324/dubHacks25"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Repo
+              </a>
+
+              <a
+                class="pill"
+                href="https://devpost.com/software/map-based-selling-app"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Devpost
+              </a>
+            </div>
+          </div>
+
+          <div class="project-media">
+            <img
+              src="images/Secondstep.png"
+              alt="SecondStep prototype screen preview"
+              loading="lazy"
+            />
+          </div>
+        </article>
+      </main>
 
       <footer class="footer">
-        <small>© <span id="year"></span> Maximiliano Bange</small>
+        <p class="muted">© <span id="year"></span> Maximiliano Bange</p>
       </footer>
-    </main>
+    </div>
 
-    <script src="script.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>

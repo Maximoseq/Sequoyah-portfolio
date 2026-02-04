@@ -1,0 +1,344 @@
+/* ========== Base ========== */
+:root {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #5b6475;
+  --border: rgba(15, 23, 42, 0.12);
+
+  --dark-bg: #0b0f17;
+  --dark-card: #111827;
+  --dark-text: #f3f4f6;
+  --dark-muted: #c7cbd4;
+  --dark-border: rgba(255, 255, 255, 0.14);
+
+  --radius: 18px;
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji",
+    "Segoe UI Emoji";
+  line-height: 1.35;
+}
+
+.page {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 28px 18px 50px;
+}
+
+/* ========== Page themes ========== */
+.design-page {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.data-page {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+/* Page-specific link color */
+.design-page a {
+  color: #111;
+}
+
+.data-page a {
+  color: #ffffff;
+}
+
+/* ========== Header ========== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 260px;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  background: #e8eaf2;
+}
+
+.data-page .avatar {
+  border-color: var(--dark-border);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.name {
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: -0.02em;
+}
+
+.sub {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.data-page .sub {
+  color: var(--dark-muted);
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center the logo under buttons */
+  gap: 16px;
+}
+
+.social-links {
+  display: flex;
+  gap: 14px;
+}
+
+.school-logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* pushes it slightly lower */
+}
+
+.school-logo img {
+  width: 230px;   /* adjust if needed */
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========== Pills / Buttons ========== */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+
+.pill:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.data-page .pill {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--dark-border);
+  color: #fff;
+}
+
+.pill-dark {
+  background: #0b1220;
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.data-page .pill-dark {
+  background: #000;
+}
+
+/* ========== Switch ========== */
+.switch {
+  margin-top: 16px;
+  display: inline-flex;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.data-page .switch {
+  border-color: var(--dark-border);
+}
+
+.switch-btn {
+  padding: 12px 16px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+  background: transparent;
+  color: inherit;
+}
+
+.switch-btn.active {
+  background: #0b1220;
+  color: #fff;
+}
+
+.data-page .switch-btn.active {
+  background: #fff;
+  color: #0b0f17;
+}
+
+/* ========== Cards / Sections ========== */
+.card {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: var(--radius);
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.data-page .card {
+  background: var(--dark-card);
+  border-color: var(--dark-border);
+  box-shadow: none;
+}
+
+.lead {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+.contact {
+  margin: 0 0 14px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.data-page .contact {
+  color: var(--dark-muted);
+}
+
+.section-title {
+  margin: 12px 0 8px;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.muted {
+  color: var(--muted);
+  margin: 0;
+}
+
+.data-page .muted {
+  color: var(--dark-muted);
+}
+
+/* ========== Projects ========== */
+.stack {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 16px;
+  padding: 18px;
+  border-radius: var(--radius);
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.data-page .project {
+  background: var(--dark-card);
+  border-color: var(--dark-border);
+  box-shadow: none;
+}
+
+.project-title {
+  margin: 0 0 8px;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+}
+
+.project-desc {
+  margin: 0 0 10px;
+  color: var(--muted);
+}
+
+.data-page .project-desc {
+  color: var(--dark-muted);
+}
+
+.tags {
+  margin: 0 0 14px;
+  display: inline-block;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(15, 23, 42, 0.04);
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.data-page .tags {
+  border-color: var(--dark-border);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--dark-muted);
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Key fix: images no longer blow up and wreck the page */
+.project-media img {
+  width: 100%;
+  max-height: 280px;
+  border-radius: 14px;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  background: #eef0f7;
+  display: block;
+}
+
+.data-page .project-media img {
+  border-color: var(--dark-border);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Footer */
+.footer {
+  margin-top: 28px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 860px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .project {
+    grid-template-columns: 1fr;
+  }
+
+  .uw-logo {
+    height: 30px;
+  }
+}
